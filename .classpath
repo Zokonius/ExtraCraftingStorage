@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/ressources"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/Forge 1.12.2-14.23.5.2768"/>
+	<classpathentry kind="lib" path="libs/appliedenergistics2-rv6-stable-6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+            "all": "extracraftingstorage:blocks/storage_4096k"
+    }
+}

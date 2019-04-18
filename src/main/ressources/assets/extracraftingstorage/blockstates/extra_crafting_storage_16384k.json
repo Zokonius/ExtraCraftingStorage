@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "normal": {
+            "model": "extracraftingstorage:storage_16384k"
+        }
+    }
+}
