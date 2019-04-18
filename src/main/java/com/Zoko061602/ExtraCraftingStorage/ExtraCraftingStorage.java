@@ -9,7 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-@Mod(modid=ExtraCraftingStorage.ModID,name=ExtraCraftingStorage.ModID,version="1.0",dependencies="required-after:extracells;required-after:appliedenergistics2")
+@Mod(modid=ExtraCraftingStorage.ModID,name=ExtraCraftingStorage.ModID,version="1.0-rv3-beta10",dependencies="required-after:extracells;required-after:appliedenergistics2")
 public class ExtraCraftingStorage {
 
 	public static final String ModID = "ExtraCraftingStorage";

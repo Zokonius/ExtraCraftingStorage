@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0.0"
+version = "1.0-rv3-beta10"
 group= "com.Zoko061602.ExtraCraftingStorage" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraCraftingStorage"
 

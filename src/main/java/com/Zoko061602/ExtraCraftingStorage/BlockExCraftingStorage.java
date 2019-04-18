@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import appeng.block.AEBaseBlock;
-import appeng.client.render.BaseBlockRender;
+import appeng.block.crafting.BlockCraftingUnit;
 import appeng.client.render.blocks.RenderBlockCraftingCPU;
 import appeng.core.features.AEFeature;
 import appeng.core.sync.GuiBridge;
@@ -14,7 +13,6 @@ import appeng.tile.crafting.TileCraftingTile;
 import appeng.util.Platform;
 import extracells.Extracells;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,26 +23,21 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockExCraftingStorage extends AEBaseBlock {
+public class BlockExCraftingStorage extends BlockCraftingUnit {
 
 	private static IIcon[] icons = new IIcon[10];
 
-	public BlockExCraftingStorage( Class<BlockExCraftingStorage> c){
-		super( c, Material.iron );
+	public BlockExCraftingStorage(){
+		this.setTileEntity(TileExCraftingStorage.class);
         this.setCreativeTab(Extracells.ModTab());
 		this.hasSubtypes = true;
 		this.setFeature(EnumSet.of( AEFeature.CraftingCPU));
 		this.setBlockName("blockCraftingStorage");
 	}
 
-	public BlockExCraftingStorage() {
-		this(BlockExCraftingStorage.class );
-		this.setTileEntity(TileExCraftingStorage.class);
-	}
-
 	@Override
-	protected Class<? extends BaseBlockRender> getRenderer(){
-		return RenderBlockCraftingCPU.class;
+	protected RenderBlockCraftingCPU<? extends BlockCraftingUnit, ? extends TileCraftingTile> getRenderer(){
+		return new RenderBlockCraftingCPU<BlockExCraftingStorage, TileCraftingTile>();
 	}
 
 	@Override
