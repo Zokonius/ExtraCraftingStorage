@@ -1,11 +1,12 @@
 package com.Zoko061602.ExtraCraftingStorage;
-
-
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
+import com.nepjr.ae.AppEngExp;
+
 import appeng.block.AEBaseBlock;
+import appeng.block.crafting.BlockCraftingUnit;
 import appeng.client.render.BaseBlockRender;
 import appeng.client.render.blocks.RenderBlockCraftingCPU;
 import appeng.core.features.AEFeature;
@@ -25,12 +26,12 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockExCraftingStorage extends AEBaseBlock {
+public class BlockExCraftingStorage extends BlockCraftingUnit {
 
 	private static IIcon[] icons = new IIcon[10];
 
 	public BlockExCraftingStorage( Class<BlockExCraftingStorage> c){
-		super( c, Material.iron );
+		super( );
         this.setCreativeTab(Extracells.ModTab());
 		this.hasSubtypes = true;
 		this.setFeature(EnumSet.of( AEFeature.CraftingCPU));
@@ -40,11 +41,6 @@ public class BlockExCraftingStorage extends AEBaseBlock {
 	public BlockExCraftingStorage() {
 		this(BlockExCraftingStorage.class );
 		this.setTileEntity(TileExCraftingStorage.class);
-	}
-
-	@Override
-	protected Class<? extends BaseBlockRender> getRenderer(){
-		return RenderBlockCraftingCPU.class;
 	}
 
 	@Override
@@ -98,6 +94,7 @@ public class BlockExCraftingStorage extends AEBaseBlock {
 		int meta = w.getBlockMetadata( x, y, z );
 		return this.damageDropped( meta );
 	}
+
 
 	@Override
 	public void registerBlockIcons(IIconRegister ir) {
