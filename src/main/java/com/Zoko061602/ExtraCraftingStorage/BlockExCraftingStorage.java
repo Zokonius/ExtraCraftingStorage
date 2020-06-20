@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import com.nepjr.ae.AppEngExp;
 
 import appeng.block.AEBaseBlock;
 import appeng.block.crafting.BlockCraftingUnit;
